@@ -13,36 +13,43 @@ header {
     width: 100%;
 }
 
+/* Side bar */
+
 .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     background: #333;
     opacity: 0.8;
-    width: 10rem;
+    width: 4rem;
     height: 100vh;
+    transition: all 0.5s ease;
+    overflow-x: hidden;
 }
 
 .user-profile {
     display: flex;
+    flex-direction: row;
     align-items: center;
-    padding-left: 1rem;
     color: #fff;
 }
 
 .user-profile img {
     width: 3rem;
-    height: auto;
-    margin-right: 0.5rem;
+    height: auto;   
+    border-radius: 50%;
     opacity: 1;
 }
 
 .nav-links {
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: space-around;
     height: 25rem;
-
 }
 
 .links {
@@ -50,10 +57,14 @@ header {
     height: 4rem;
     width: 100%;
     display: flex;
-    padding-left: 1rem;
     justify-content: flex-start;
     align-items: center;
+    padding: 0rem 2rem 0rem 1.5rem;
     cursor: pointer;
+}
+
+.links i {
+    padding-right: 2rem;
 }
 
 .links:hover {
@@ -66,7 +77,7 @@ header {
 }
 
 .settings {
-    padding-left: 1rem;
+    padding-left: 2rem;
     color: grey;
     cursor: pointer;
 }
@@ -75,3 +86,31 @@ header {
     color: #fff;
 }
 
+/* Main */
+
+/* Slideshow */
+
+.slide-show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.container {
+    position: relative;
+    width: 31rem;
+    height: 25rem;
+}
+
+img {
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: auto;
+}
+
+.show {
+    opacity: 1;
+}
